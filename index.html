@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Una aplicación TODO para gestionar nuestra tareas en angular</title>
+	<title>Una aplicación TODO para gestionar nuestra tareas con AngularJS</title>
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script src="app.js"></script>
@@ -14,9 +14,13 @@
 			font-size: 20px;
 		}
 		.todo_input{
-			width: 50%;
+			width: 30%;
 
 		}
+		.tachado{
+			text-decoration:line-through;
+		}
+
 	</style>
 
 </head>
@@ -41,8 +45,8 @@
 			  	<th>Gestion</th>
 			  </tr>
 			  <tr ng-repeat="todo in todos">
-			  	<td><p>{{todo.name}}</p></td>
-			  	<td><button class="btn btn-warning" ng-click="deleteTodo(todo)">Borrar</button></td>
+			  	<td><p ng-class="myVar">{{todo.name}}</p></td>
+			  	<td><button class="btn btn-info" ng-click="myVar='tachado'">Terminado!</button>	&nbsp;&nbsp;<button class="btn btn-warning" ng-click="deleteTodo(todo)">Borrar</button></td>
 			  </tr>
 			</table>
 </center>
