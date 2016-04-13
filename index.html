@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Una aplicación TODO para gestionar nuestra tareas en angular</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="app.js"></script>
+	<style>
+		.panel-cd{
+			width: 50%;ç
+		}
+		table p{
+			font-size: 20px;
+		}
+		.todo_input{
+			width: 50%;
+
+		}
+	</style>
+
+</head>
+<body ng-app="codigodario_todo" ng-controller="TODOCtrl">
+	<div class="container-fluid">
+		<center>
+			<img src="http://codigodiario.me/wp-content/uploads/2016/04/emblemmatic-codigodiario-logo-101.png" alt="">
+			<div class="input-group input-group-lg todo_input">
+			  <input type="text" ng-model="todoInput" class="form-control" placeholder="Darle de comer al gato..." aria-describedby="sizing-addon1">
+			  <span class="input-group-btn">
+		        <button class="btn btn-primary" type="button" ng-click="addTodo()">Añadir</button>
+		      </span>
+			</div>
+		</center>	
+
+		<!-- PANEL -->
+		<br><br>
+		<center>
+			<table class="table panel-cd">
+			  <tr>
+			  	<th>TODO</th>
+			  	<th>Gestion</th>
+			  </tr>
+			  <tr ng-repeat="todo in todos">
+			  	<td><p>{{todo.name}}</p></td>
+			  	<td><button class="btn btn-warning" ng-click="deleteTodo(todo)">Borrar</button></td>
+			  </tr>
+			</table>
+</center>
+	</div>
+</body>
+</html>

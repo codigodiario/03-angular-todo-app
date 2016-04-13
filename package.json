@@ -1,0 +1,27 @@
+{
+  "name": "03-angular-todo-app",
+  "version": "1.0.0",
+  "description": "Una aplicación TODO para gestionar nuestra tareas en angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codigodiario/03-angular-todo-app.git"
+  },
+  "keywords": [
+    "TODO",
+    "Angular"
+  ],
+  "author": "Fridox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codigodiario/03-angular-todo-app/issues"
+  },
+  "homepage": "https://github.com/codigodiario/03-angular-todo-app#readme",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "bootstrap": "^3.3.6"
+  }
+}
